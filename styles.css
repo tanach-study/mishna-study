@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/background.jpg");
+  background-image: url("/background.png");
+  background-color: rgba(149,0,16,0.9);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -36,8 +37,8 @@ section#date-banner {
 }
 
 #outer-box {
-  height: 30vh;
-  width: 60vw;
+  height: 25vh;
+  width: 50vw;
   border: 2vh solid #950010;
   padding: 2vh 2vw;
 }
@@ -57,7 +58,7 @@ section#date-banner {
   color: #1A1A1A;
   font-family: 'Muli', sans-serif;
   font-weight: 700;
-  font-size: 18vw;
+  font-size: 16vw;
 }
 
 @media screen and (min-width: 1200px) {
