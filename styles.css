@@ -69,6 +69,10 @@ section#date-banner {
   section#signup-link a {
     font-size: 1.6rem;
   }
+
+  section#signup-link a:hover {
+    font-size: 1.7rem;
+  }
 }
 
 section#signup-link {
@@ -80,12 +84,17 @@ section#signup-link a, section#signup-link a:visited {
   text-decoration: none;
   color: #464646;
   font-size: 5vw;
+  animation: pulsate 10s ease-out;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+  transition: font-size 1s ease;
 }
 
 section#signup-link a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: #950010;
-  transition: color 1.5s;
+  animation-play-state: paused;
+  font-size: 5.5vw;
 }
 
 .wiggle:hover {
@@ -108,5 +117,17 @@ section#signup-link a:hover {
   }
   100% {
     transform: rotate(-10deg);
+  }
+}
+
+@keyframes pulsate {
+  0%  {
+    color: #464646;
+  }
+  50%  {
+    color: #950010;
+  }
+  100%  {
+    color: #464646;
   }
 }
