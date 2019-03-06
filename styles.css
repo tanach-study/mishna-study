@@ -86,3 +86,26 @@ section#signup-link a:hover {
   color: #950010;
   transition: color 1.5s;
 }
+
+.wiggle:hover {
+  animation: wiggle .6s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes wiggle {
+  20%  {
+    transform: rotate(-12deg);
+  }
+  40%  {
+    transform: rotate(-8deg);
+  }
+  60%  {
+    transform: rotate(-11deg);
+  }
+  80%  {
+    transform: rotate(-9deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
