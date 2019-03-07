@@ -1,14 +1,22 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("/background.png");
-  background-color: rgba(149,0,16,0.9);
+  background-image: url("/background-slim.jpg");
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  opacity: 0.5;
+  background-color: rgb(149,0,16);
+  z-index: -100;
 }
 
 main {
@@ -82,19 +90,14 @@ section#signup-link {
 
 section#signup-link a, section#signup-link a:visited {
   text-decoration: none;
-  color: #464646;
+  color: #950010;
   font-size: 5vw;
-  animation: pulsate 10s ease-out;
-  animation-iteration-count: infinite;
-  animation-delay: 0.5s;
-  transition: font-size 1s ease;
 }
 
 section#signup-link a:hover {
   text-decoration: underline;
   color: #950010;
-  animation-play-state: paused;
-  font-size: 5.5vw;
+  font-size: 5vw;
 }
 
 .wiggle:hover {
@@ -117,17 +120,5 @@ section#signup-link a:hover {
   }
   100% {
     transform: rotate(-10deg);
-  }
-}
-
-@keyframes pulsate {
-  0%  {
-    color: #464646;
-  }
-  50%  {
-    color: #950010;
-  }
-  100%  {
-    color: #464646;
   }
 }
