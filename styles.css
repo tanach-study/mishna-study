@@ -69,20 +69,6 @@ section#date-banner {
   font-size: 16vw;
 }
 
-@media screen and (min-width: 1200px) {
-  #date-paragraph {
-    font-size: 10rem;
-  }
-
-  section#signup-link a {
-    font-size: 1.6rem;
-  }
-
-  section#signup-link a:hover {
-    font-size: 1.7rem;
-  }
-}
-
 section#signup-link {
   font-family: 'Muli', sans-serif;
   font-weight: 700;
@@ -91,18 +77,32 @@ section#signup-link {
 section#signup-link a, section#signup-link a:visited {
   text-decoration: none;
   color: #950010;
-  font-size: 5vw;
+  font-size: 7vw;
 }
 
 section#signup-link a:hover {
   text-decoration: underline;
   color: #950010;
-  font-size: 5vw;
+  font-size: 7vw;
 }
 
 .wiggle:hover {
   animation: wiggle .6s ease;
   animation-iteration-count: 1;
+}
+
+@media screen and (min-width: 1200px) {
+  #date-paragraph {
+    font-size: 10rem;
+  }
+
+  section#signup-link a {
+    font-size: 4.5rem;
+  }
+
+  section#signup-link a:hover {
+    font-size: 4.5rem;
+  }
 }
 
 @keyframes wiggle {
