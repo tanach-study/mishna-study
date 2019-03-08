@@ -18,8 +18,6 @@
   <meta name="msapplication-TileColor" content="#b91d47">
   <meta name="theme-color" content="#950010">
 
-
-  
   <title>Mishna Study - Stay Tuned!</title>
   <link rel="stylesheet" href="styles.css">
 
@@ -41,8 +39,37 @@
       </div>
     </section>
     <section id="signup-link">
-      <a href="http://tanachstudy.com/signup" target="blank">Join the Movement</a>
+      <p>Join the Movement</p>
     </section>
+    <section id="signup-form" class="modal">
+      <div class="modal-wrapper">
+        <!-- Begin Constant Contact Inline Form Code -->
+        <div class="ctct-inline-form" data-form-id="06b0ca94-ff2c-482e-a600-6bfcfd5c684f"></div>
+        <!-- End Constant Contact Inline Form Code -->
+      </div>
+    </section>
+        <!-- Begin Constant Contact Active Forms -->
+    <script> var _ctct_m = "e29a7832ff2f5964545030d0be028bd9"; </script>
+    <script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+    <!-- End Constant Contact Active Forms -->
   </main>
+  <script>
+    var $link = document.querySelector('#signup-link');
+    $link.addEventListener('click', clickHandler);
+    function clickHandler(e) {
+      var $form = document.querySelector('#signup-form');
+      var classes = $form.className.split(' ');
+      var location = classes.indexOf('show-modal');
+      if (location == -1) {
+        $form.className += ' show-modal';
+        $form.className = $form.className.trim();
+      } else {
+        classes.splice(location, 1, '');
+        $form.className = classes.join(' ');
+      }
+      console.log($form.className)
+    }
+
+  </script>
 </body>
 </html>

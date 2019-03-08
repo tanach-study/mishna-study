@@ -75,13 +75,13 @@ section#signup-link {
   font-weight: 700;
 }
 
-section#signup-link a, section#signup-link a:visited {
+section#signup-link p {
   text-decoration: none;
   color: #950010;
   font-size: 7vw;
 }
 
-section#signup-link a:hover {
+section#signup-link p:hover {
   text-decoration: underline;
   color: #950010;
   font-size: 7vw;
@@ -90,6 +90,28 @@ section#signup-link a:hover {
 .wiggle:hover {
   animation: wiggle .6s ease;
   animation-iteration-count: 1;
+}
+
+.modal {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  background-color: rgba(70,70,70,0.8);
+  visibility: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show-modal {
+  visibility: visible;
+}
+
+.modal-wrapper {
+  height: 70%;
+  width: 70%;
 }
 
 @media screen and (min-width: 1200px) {
