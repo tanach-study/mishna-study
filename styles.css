@@ -76,12 +76,6 @@ section#signup-link {
 }
 
 section#signup-link p {
-  text-decoration: none;
-  color: #950010;
-  font-size: 7vw;
-}
-
-section#signup-link p:hover {
   text-decoration: underline;
   color: #950010;
   font-size: 7vw;
