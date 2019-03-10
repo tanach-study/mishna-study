@@ -65,7 +65,6 @@
     $form.addEventListener('click', toggleModal);
     $close.addEventListener('click', closeModal);
     function toggleModal(e) {
-      console.log(e.target)
       var classes = $form.className.split(' ');
       var location = classes.indexOf('show-modal');
       var targets = [
@@ -81,7 +80,6 @@
         classes.splice(location, 1, '');
         $form.className = classes.join(' ');
       }
-      console.log($form.className)
     }
 
     function closeModal(e) {

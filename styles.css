@@ -170,6 +170,7 @@ section#signup-link p:hover {
     height: 10%;
     background-color: #1a1a1a;
     padding: 0 5%;
+    cursor: pointer;
   }
 }
 
