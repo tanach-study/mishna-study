@@ -29,7 +29,7 @@
   </div>
   <main>
     <section id="logo">
-      <img src="logo.png" alt="Mishna Study logo with books">
+      <img src="/logo.png" alt="Mishna Study logo with books">
     </section>
     <section id="date-banner" class="wiggle">
       <div id="outer-box">
@@ -42,7 +42,11 @@
       <p>Join the Movement</p>
     </section>
     <section id="signup-form" class="modal">
-      <div class="modal-wrapper">
+      <div class="modal-wrapper" id="modal-wrapper">
+        <div class="modal-close" id="modal-close">
+          <div class="close-icon" id="close-icon"></div>
+          <img class="close-logo" id="close-logo" src="/logo.png" alt="Mishna Study logo with books">
+        </div>
         <!-- Begin Constant Contact Inline Form Code -->
         <div class="ctct-inline-form" data-form-id="06b0ca94-ff2c-482e-a600-6bfcfd5c684f"></div>
         <!-- End Constant Contact Inline Form Code -->
@@ -55,19 +59,33 @@
   </main>
   <script>
     var $link = document.querySelector('#signup-link');
-    $link.addEventListener('click', clickHandler);
-    function clickHandler(e) {
-      var $form = document.querySelector('#signup-form');
+    var $form = document.querySelector('#signup-form');
+    var $close = document.querySelector('#modal-close');
+    $link.addEventListener('click', toggleModal);
+    $form.addEventListener('click', toggleModal);
+    $close.addEventListener('click', closeModal);
+    function toggleModal(e) {
+      console.log(e.target)
       var classes = $form.className.split(' ');
       var location = classes.indexOf('show-modal');
-      if (location == -1) {
-        $form.className += ' show-modal';
-        $form.className = $form.className.trim();
-      } else {
+      var targets = [
+        $form,
+        $close,
+        document.querySelector('#close-icon'),
+        document.querySelector('#close-logo'),
+        document.querySelector('#modal-wrapper')
+      ];
+      if (location === -1) {
+        $form.className = $form.className.trim() + ' show-modal';
+      } else if (targets.includes(e.target)) {
         classes.splice(location, 1, '');
         $form.className = classes.join(' ');
       }
       console.log($form.className)
+    }
+
+    function closeModal(e) {
+
     }
 
   </script>
